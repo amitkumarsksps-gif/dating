@@ -140,7 +140,7 @@ const layer2Pages = [
   // ✅ Layer 2 → FINAL
   if (layer2Pages.includes(currentPage)) {
 
-    window.location.href = "https://dirtypush.com/";
+    window.location.href = "https://dirtypush.com";
 
   } else {
 
