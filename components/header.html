@@ -1,5 +1,109 @@
-<header class="main-header">
-  <a href="https://dirtypush.com" target="_blank" class="header-link">
-    Dating Tips
-  </a>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* HEADER */
+.header {
+  position:sticky;
+  top:0;
+  background:linear-gradient(90deg,#007bff,#00c6ff);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:55px;
+  z-index:1000;
+}
+
+/* SITE TITLE */
+.site-title {
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* HAMBURGER */
+.menu-btn {
+  position:absolute;
+  left:15px;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:250px;
+  height:100%;
+  background:#fff;
+  box-shadow:2px 0 10px rgba(0,0,0,0.2);
+  transition:0.3s;
+  z-index:1001;
+  padding-top:60px;
+}
+
+.sidebar a {
+  display:block;
+  padding:12px 20px;
+  text-decoration:none;
+  color:#333;
+  border-bottom:1px solid #eee;
+}
+
+.sidebar a:hover {
+  background:#f0f0f0;
+}
+
+/* OVERLAY */
+.overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  z-index:1000;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+  <div class="site-title">Dating Tips</div>
+</div>
+
+<!-- SIDEBAR MENU -->
+<div class="sidebar" id="sidebar">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<script>
+function openMenu(){
+  document.getElementById("sidebar").style.left = "0";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function closeMenu(){
+  document.getElementById("sidebar").style.left = "-260px";
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
