@@ -103,50 +103,39 @@ function startButtonTimer() {
 
 // 🔗 SMART REDIRECT (2-LAYER SYSTEM)
 function goToSite3() {
-const layer2Pages = [
-"https://wpcalls.dirtypush.com/",
-"https://wpcalls.dirtypush.com/",
-"https://wpcalls.dirtypush.com/",
-"dating-apps-over-30-uk.html",
-"https://wpcalls.dirtypush.com/",
-"best-dating-apps-canada.html",
-"https://wpcalls.dirtypush.com/",
-"hookup-apps-canada.html",
-"https://wpcalls.dirtypush.com/",
-"https://wpcalls.dirtypush.com/",
-"best-dating-apps-india.html",
-"https://wpcalls.dirtypush.com/",
-"dating-apps-for-students-india.html",
-"https://wpcalls.dirtypush.com/",
-"real-dating-apps-india.html",
-"https://wpcalls.dirtypush.com/",
-"free-dating-sites-usa.html",
-"https://wpcalls.dirtypush.com/",
-"https://wpcalls.dirtypush.com/",
-"https://wpcalls.dirtypush.com/"
-];
 
-  // 🔥 correct current page detect
-  let currentPage = window.location.pathname;
+  const layer2Pages = [
+    "best-dating-apps-uk.html",
+    "free-dating-sites-uk.html",
+    "best-dating-apps-canada.html",
+    "free-dating-sites-canada.html",
+    "best-dating-apps-india.html",
+    "free-dating-apps-india.html",
+    "best-dating-apps-usa.html",
+    "free-dating-sites-usa.html"
+  ];
 
-  // remove folder path
-  currentPage = currentPage.substring(currentPage.lastIndexOf("/") + 1);
+  let currentPage = window.location.pathname
+    .split("/")
+    .pop()
+    .split("?")[0]
+    .toLowerCase();
 
-  // remove query params
-  currentPage = currentPage.split("?")[0];
+  const normalizedPages = layer2Pages.map(p => p.toLowerCase());
 
   console.log("Current Page:", currentPage);
 
-  // ✅ Layer 2 → FINAL
-  if (layer2Pages.includes(currentPage)) {
-
+  // ✅ Layer 2 → FINAL LINK
+  if (normalizedPages.includes(currentPage)) {
+    console.log("✅ FINAL REDIRECT");
     window.location.href = "https://wpcalls.dirtypush.com/";
+  } 
+  
+  // 🔥 Layer 1 → Random Layer 2
+  else {
+    console.log("➡️ Going to Layer 2");
 
-  } else {
-
-    // 🔥 Layer 1 → random Layer 2
     const randomPage = layer2Pages[Math.floor(Math.random() * layer2Pages.length)];
-
-    window.location.href = "/" + randomPage; // ✅ ROOT FIX
+    window.location.href = "/" + randomPage;
   }
 }
