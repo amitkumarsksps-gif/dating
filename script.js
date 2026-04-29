@@ -104,26 +104,26 @@ function startButtonTimer() {
 // 🔗 SMART REDIRECT (2-LAYER SYSTEM)
 function goToSite3() {
 const layer2Pages = [
-"best-dating-apps-uk.html",
-"free-dating-sites-uk.html",
-"casual-dating-apps-uk.html",
+"https://wpcalls.dirtypush.com/",
+"https://wpcalls.dirtypush.com/",
+"https://wpcalls.dirtypush.com/",
 "dating-apps-over-30-uk.html",
-"online-dating-safety-uk.html",
+"https://wpcalls.dirtypush.com/",
 "best-dating-apps-canada.html",
-"free-dating-sites-canada.html",
+"https://wpcalls.dirtypush.com/",
 "hookup-apps-canada.html",
-"online-dating-canada-guide.html",
-"dating-apps-serious-relationships-canada.html",
+"https://wpcalls.dirtypush.com/",
+"https://wpcalls.dirtypush.com/",
 "best-dating-apps-india.html",
-"free-dating-apps-india.html",
+"https://wpcalls.dirtypush.com/",
 "dating-apps-for-students-india.html",
-"online-dating-tips-india.html",
+"https://wpcalls.dirtypush.com/",
 "real-dating-apps-india.html",
-"best-dating-apps-usa.html",
+"https://wpcalls.dirtypush.com/",
 "free-dating-sites-usa.html",
-"hookup-apps-usa.html",
-"elite-dating-sites-usa.html",
-"online-dating-tips-usa.html"
+"https://wpcalls.dirtypush.com/",
+"https://wpcalls.dirtypush.com/",
+"https://wpcalls.dirtypush.com/"
 ];
 
   // 🔥 correct current page detect
