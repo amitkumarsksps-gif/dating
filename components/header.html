@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="header">
+  <div class="menu-btn">☰</div>
+  <div class="site-title">Dating Tips</div>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
 
 <style>
-/* HEADER */
-.header {
+.header{
   position:sticky;
   top:0;
   background:linear-gradient(90deg,#007bff,#00c6ff);
@@ -18,22 +27,19 @@
   z-index:1000;
 }
 
-/* SITE TITLE */
-.site-title {
+.site-title{
   font-size:20px;
   font-weight:bold;
 }
 
-/* HAMBURGER */
-.menu-btn {
+.menu-btn{
   position:absolute;
   left:15px;
   font-size:26px;
   cursor:pointer;
 }
 
-/* SIDEBAR */
-.sidebar {
+.sidebar{
   position:fixed;
   top:0;
   left:-260px;
@@ -46,7 +52,7 @@
   padding-top:60px;
 }
 
-.sidebar a {
+.sidebar a{
   display:block;
   padding:12px 20px;
   text-decoration:none;
@@ -54,12 +60,11 @@
   border-bottom:1px solid #eee;
 }
 
-.sidebar a:hover {
+.sidebar a:hover{
   background:#f0f0f0;
 }
 
-/* OVERLAY */
-.overlay {
+.overlay{
   position:fixed;
   top:0;
   left:0;
@@ -70,47 +75,3 @@
   z-index:1000;
 }
 </style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<div class="header">
-  <div class="menu-btn" onclick="openMenu()">☰</div>
-  <div class="site-title">Dating Tips</div>
-</div>
-
-<!-- SIDEBAR MENU -->
-<div class="sidebar" id="sidebar">
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
-  <a href="/privacy.html">Privacy</a>
-  <a href="/terms.html">Terms</a>
-  <a href="/disclaimer.html">Disclaimer</a>
-</div>
-
-<!-- OVERLAY -->
-<div class="overlay" id="overlay" onclick="closeMenu()"></div>
-
-<script>
-function openMenu(){
-  document.getElementById("sidebar").style.left = "0";
-  document.getElementById("overlay").style.display = "block";
-}
-
-function closeMenu(){
-  document.getElementById("sidebar").style.left = "-260px";
-  document.getElementById("overlay").style.display = "none";
-}
-</script>
-
-<div id="header"></div>
-
-<!-- content -->
-
-<div id="footer"></div>
-
-<script src="/main.js"></script>
-</body>
-</html>
