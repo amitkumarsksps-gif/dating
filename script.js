@@ -128,7 +128,7 @@ function goToSite3() {
   // ✅ Layer 2 → FINAL LINK
   if (normalizedPages.includes(currentPage)) {
     console.log("✅ FINAL REDIRECT");
-    window.location.href = "https://wpcalls.dirtypush.com";
+    window.location.href = "https://wpcalls.dirtypush.com/";
   } 
   
   // 🔥 Layer 1 → Random Layer 2
